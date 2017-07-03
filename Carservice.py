@@ -151,18 +151,12 @@ class window(QWidget):
                 session.ehlo()
                 session.starttls()
                 session.ehlo()
-                session.login(str(fromaddr),'yolserviceltd123')
+                session.login(str(fromaddr),'parolunuz-email ucun')
                 session.sendmail(str(fromaddr),str(toaddr),str(msg))
                 session.quit()
                 self.message=QMessageBox()
                 self.message.setWindowTitle("")
                 self.message=QMessageBox.question(self,'Title',u'Ehtiyyat üçün şifrəniz,poçt ünvanınıza göndərildi\nQeydiyyat uğurla başa çatdı,Ok düyməsini sıxın',QMessageBox.Ok)
-
-
-
-
-
-
                 if self.message==QMessageBox.Ok:
                     pass
                     
