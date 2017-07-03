@@ -130,7 +130,7 @@ class window(QWidget):
 
         def ok(self):
 
-            fromaddr='yolserviceltd'
+            fromaddr='sizin emailiniz'  #emailinizi yazin
             toaddr=self.line_email.text()
             msg=self.line_passw.text()
             try:
@@ -151,7 +151,7 @@ class window(QWidget):
                 session.ehlo()
                 session.starttls()
                 session.ehlo()
-                session.login(str(fromaddr),'parolunuz-email ucun')
+                session.login(str(fromaddr),'email sifreniz') #email şifrəniz
                 session.sendmail(str(fromaddr),str(toaddr),str(msg))
                 session.quit()
                 self.message=QMessageBox()
@@ -213,7 +213,7 @@ class window(QWidget):
                 result=self.crs.execute("SELECT panel_email,panel_password FROM panel WHERE panel_email=='{}' AND panel_password =='{}'".format(self.line_emailsign.text(),self.line_passwsign.text()))
                 if  len(result.fetchall())>0:
                     
-                    os.system("python /home/xaos/Programlar/atelye/main.py")
+                    os.system("python /home/istifadəçi/Programlar/atelye/main.py")   #faylların yerləşdiyi qovluqlara uyğun adlandırın
                                     
 
                             
